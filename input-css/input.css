@@ -1,3 +1,253 @@
+/****************************** BASE ************************************/
+
 @import 'tailwindcss/base';
+body {
+  font-family: 'Public Sans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-weight: 300;
+  line-height: 1.2;
+  @apply text-dark-blue;
+  @apply mb-4;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.3rem;
+  margin: 1.3rem auto;
+}
+
+h6 {
+  font-size: 0.6rem;
+  @apply mb-3;
+  @apply text-grayish-blue;
+}
+
+p {
+  @apply text-grayish-blue;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.paragraph-in-card {
+  font-size: 0.75rem;
+}
+
+figcaption {
+  @apply pt-6;
+  @apply pb-10;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+li {
+  @apply py-1;
+}
+
+a {
+  font-size: 0.9rem;
+}
+
+/****************************** COMPONENTS ************************************/
 @import 'tailwindcss/components';
+.nav-list {
+  @apply max-w-auto;
+  @apply absolute;
+  @apply text-center;
+  @apply bg-white;
+  @apply py-4;
+  border-radius: 0.5rem;
+  top: 135%;
+}
+
+.nav-list li a {
+  font-size: 1.2rem;
+  padding: 0.75rem 0;
+}
+
+.cta-button {
+  background-image: linear-gradient(
+    to right,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+  padding: 0.7rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: white;
+  border-radius: 5rem;
+}
+
+.cta-button:hover {
+  opacity: 0.7;
+}
+
+.card {
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+
+figure > img {
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  overflow: hidden;
+}
+.nav-list li {
+  position: relative;
+  display: inline-block;
+  transition: width 0.2s ease height 0.4s ease-in;
+}
+
+.nav-list li::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 65px;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: hsl(136, 65%, 51%);
+}
+
+.nav-list li:hover a {
+  @apply text-dark-blue;
+}
+.nav-list li:hover::after {
+  height: 2px;
+  width: 100%;
+}
+
+li > a:hover,
+figcaption > h4:hover {
+  color: hsl(136, 65%, 51%);
+  cursor: pointer;
+}
+
+a svg:hover path {
+  fill: hsl(136, 65%, 51%);
+}
+
+.icon {
+  margin: 0 auto;
+}
+
+/****************************** UTILITIES ************************************/
+
 @import 'tailwindcss/utilities';
+.max-w-auto {
+  @apply w-10/12;
+  @apply mx-auto;
+  @apply my-0;
+}
+
+.-top-6-5 {
+  top: -6.5rem;
+}
+.-top-5 {
+  top: -5rem;
+}
+.-top-4 {
+  top: -4rem;
+}
+.-top-3-5 {
+  top: -3.5rem;
+}
+.-top-2 {
+  top: -2rem;
+}
+
+.-z-1 {
+  z-index: -1;
+}
+
+.shadow {
+  background-color: rgba(45, 49, 77, 0.2);
+}
+
+@screen md {
+  .nav-list {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    top: 0;
+    width: 40%;
+  }
+  .nav-list > li > a {
+    @apply text-grayish-blue;
+    font-size: 1rem;
+  }
+
+  .bg-container {
+    width: 120%;
+  }
+  .content {
+    @apply max-w-auto;
+  }
+
+  .anticontent {
+    @apply w-full;
+    @apply mx-0;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+  .card {
+    text-align: left;
+  }
+  .icon {
+    margin: 0;
+  }
+  .image-mobiles {
+    right: -7rem;
+    top: -6.5rem;
+  }
+
+  h1,
+  h2,
+  p {
+    text-align: left;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  figure {
+    @apply grid;
+    @apply grid-rows-2;
+    @apply relative;
+  }
+  figure > img {
+    position: absolute;
+    width: 100%;
+    min-width: auto;
+    height: 50%;
+  }
+  figcaption {
+    grid-row: 2/-1;
+  }
+  .green-bg {
+    height: 120%;
+  }
+}

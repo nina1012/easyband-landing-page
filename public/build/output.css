@@ -1,3 +1,5 @@
+/****************************** BASE ************************************/
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -28,10 +30,19 @@ body {
  * Render the `main` element consistently in IE.
  */
 
+main {
+  display: block;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -52,6 +63,10 @@ body {
 /**
  * Remove the gray background on active links in IE 10.
  */
+
+a {
+  background-color: transparent;
+}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -83,6 +98,10 @@ body {
  * Remove the border on images inside links in IE 10.
  */
 
+img {
+  border-style: none;
+}
+
 /* Forms
    ========================================================================== */
 
@@ -91,27 +110,60 @@ body {
  * 2. Remove the margin in Firefox and Safari.
  */
 
+button,
+input {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
 
+button { /* 1 */
+  text-transform: none;
+}
+
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
+
+button,
+[type="button"] {
+  -webkit-appearance: button;
+}
 
 /**
  * Remove the inner border and padding in Firefox.
  */
 
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
 /**
  * Restore the focus styles unset by the previous rule.
  */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Correct the padding in Firefox.
@@ -136,6 +188,11 @@ body {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
+
+[type="checkbox"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
@@ -177,6 +234,10 @@ body {
  * Add the correct display in IE 10.
  */
 
+[hidden] {
+  display: none;
+}
+
 /**
  * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
  * A thin layer on top of normalize.css that provides a starting point more
@@ -187,10 +248,39 @@ body {
  * Removes the default spacing and border for appropriate elements.
  */
 
+
+h1,
+h2,
+h3,
+h4,
+h6,
+figure,
+p {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+  padding: 0;
+}
+
 /**
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
  */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 /**
  * Tailwind custom reset styles
@@ -257,10 +347,52 @@ html {
  * https://github.com/tailwindcss/tailwindcss/issues/362
  */
 
+img {
+  border-style: solid;
+}
+
+input::-webkit-input-placeholder {
+  color: #a0aec0;
+}
+
+input::-moz-placeholder {
+  color: #a0aec0;
+}
+
+input:-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+input::-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+input::placeholder {
+  color: #a0aec0;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 /**
  * Reset links to optimize for opt-in styling instead of
  * opt-out.
  */
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 /**
  * Reset form element properties that are easy to forget to
@@ -269,6 +401,13 @@ html {
  * supplement a partial reset that is already applied by
  * normalize.css.
  */
+
+button,
+input {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
 
 /**
  * Use the configured 'mono' font family for elements that
@@ -285,9 +424,607 @@ html {
  * https://github.com/mozdevs/cssremedy/issues/14
  */
 
+img,
+svg {
+  display: block;
+  vertical-align: middle;
+}
+
 /**
  * Constrain images and videos to the parent width and preserve
  * their instrinsic aspect ratio.
  *
  * https://github.com/mozdevs/cssremedy/issues/14
  */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-weight: 300;
+  line-height: 1.2;
+  --text-opacity: 1;
+  color: hsl(233,26%,24%);
+  color: rgba(45.288, 49.000799999999984, 77.112, var(--text-opacity));
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 1.3rem auto;
+}
+
+h6 {
+  font-size: 0.6rem;
+  margin-bottom: 0.75rem;
+  --text-opacity: 1;
+  color: hsl(233,8%,62%);
+  color: rgba(150.348, 152.1568, 165.852, var(--text-opacity));
+}
+
+p {
+  --text-opacity: 1;
+  color: hsl(233,8%,62%);
+  color: rgba(150.348, 152.1568, 165.852, var(--text-opacity));
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.paragraph-in-card {
+  font-size: 0.75rem;
+}
+
+figcaption {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+li {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+a {
+  font-size: 0.9rem;
+}
+
+/****************************** COMPONENTS ************************************/
+
+.nav-list {
+  @apply w-10/12;
+  @apply mx-auto;
+  @apply my-0;
+  position: absolute;
+  text-align: center;
+  --bg-opacity: 1;
+  background-color: hsl(0,0%,100%);
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  top: 135%;
+}
+
+.nav-list li a {
+  font-size: 1.2rem;
+  padding: 0.75rem 0;
+}
+
+.cta-button {
+  background-image: linear-gradient(
+    to right,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+  padding: 0.7rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: white;
+  border-radius: 5rem;
+}
+
+.cta-button:hover {
+  opacity: 0.7;
+}
+
+.card {
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+
+figure > img {
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.nav-list li {
+  position: relative;
+  display: inline-block;
+  transition: width 0.2s ease height 0.4s ease-in;
+}
+
+.nav-list li::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 65px;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: hsl(136, 65%, 51%);
+}
+
+.nav-list li:hover a {
+  --text-opacity: 1;
+  color: hsl(233,26%,24%);
+  color: rgba(45.288, 49.000799999999984, 77.112, var(--text-opacity));
+}
+
+.nav-list li:hover::after {
+  height: 2px;
+  width: 100%;
+}
+
+li > a:hover,
+figcaption > h4:hover {
+  color: hsl(136, 65%, 51%);
+  cursor: pointer;
+}
+
+a svg:hover path {
+  fill: hsl(136, 65%, 51%);
+}
+
+.icon {
+  margin: 0 auto;
+}
+
+/****************************** UTILITIES ************************************/
+
+.bg-white {
+  --bg-opacity: 1;
+  background-color: hsl(0,0%,100%);
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.bg-dark-blue {
+  --bg-opacity: 1;
+  background-color: hsl(233,26%,24%);
+  background-color: rgba(45.288, 49.000799999999984, 77.112, var(--bg-opacity));
+}
+
+.bg-light-grayish-blue {
+  --bg-opacity: 1;
+  background-color: hsl(230,16%,96%);
+  background-color: rgba(243.168, 243.712, 246.432, var(--bg-opacity));
+}
+
+.bg-very-light-blue {
+  --bg-opacity: 1;
+  background-color: hsl(0,0%,98%);
+  background-color: rgba(249.9, 249.9, 249.9, var(--bg-opacity));
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  --text-opacity: 1;
+  color: hsl(0,0%,100%);
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.text-dark-blue {
+  --text-opacity: 1;
+  color: hsl(233,26%,24%);
+  color: rgba(45.288, 49.000799999999984, 77.112, var(--text-opacity));
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.gap-6 {
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+}
+
+.gap-12 {
+  grid-gap: 3rem;
+  gap: 3rem;
+}
+
+.grid-rows-4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+
+.max-w-auto {
+  width: 83.333333%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.-top-5 {
+  top: -5rem;
+}
+
+.shadow {
+  background-color: rgba(45, 49, 77, 0.2);
+}
+
+@media (min-width: 768px) {
+  .nav-list {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    top: 0;
+    width: 40%;
+  }
+
+  .nav-list > li > a {
+    --text-opacity: 1;
+    color: hsl(233,8%,62%);
+    color: rgba(150.348, 152.1568, 165.852, var(--text-opacity));
+    font-size: 1rem;
+  }
+
+  .bg-container {
+    width: 120%;
+  }
+
+  .content {
+    width: 83.333333%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .anticontent {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+
+  .card {
+    text-align: left;
+  }
+
+  .icon {
+    margin: 0;
+  }
+
+  .image-mobiles {
+    right: -7rem;
+    top: -6.5rem;
+  }
+
+  h1,
+  h2,
+  p {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  figure {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    position: relative;
+  }
+
+  figure > img {
+    position: absolute;
+    width: 100%;
+    min-width: auto;
+    height: 50%;
+  }
+
+  figcaption {
+    grid-row: 2/-1;
+  }
+
+  .green-bg {
+    height: 120%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:inline-block {
+    display: inline-block;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:grid {
+    display: grid;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:self-center {
+    align-self: center;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
+  }
+
+  .md\:order-2 {
+    order: 2;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .md\:mr-0 {
+    margin-right: 0;
+  }
+
+  .md\:ml-auto {
+    margin-left: auto;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .md\:relative {
+    position: relative;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-right {
+    text-align: right;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:z-10 {
+    z-index: 10;
+  }
+
+  .md\:z-20 {
+    z-index: 20;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+}
