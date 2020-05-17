@@ -124,10 +124,6 @@ figure > img {
 .nav-list li:hover a {
   @apply text-dark-blue;
 }
-.nav-list li:hover::after {
-  height: 2px;
-  width: 100%;
-}
 
 li > a:hover,
 figcaption > h4:hover {
@@ -188,6 +184,10 @@ a svg:hover path {
   .nav-list > li > a {
     @apply text-grayish-blue;
     font-size: 1rem;
+  }
+  .nav-list li:hover::after {
+    height: 2px;
+    width: 100%;
   }
 
   .bg-container {

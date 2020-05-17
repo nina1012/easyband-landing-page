@@ -584,11 +584,6 @@ figure > img {
   color: rgba(45.288, 49.000799999999984, 77.112, var(--text-opacity));
 }
 
-.nav-list li:hover::after {
-  height: 2px;
-  width: 100%;
-}
-
 li > a:hover,
 figcaption > h4:hover {
   color: hsl(136, 65%, 51%);
@@ -828,6 +823,11 @@ a svg:hover path {
     color: hsl(233,8%,62%);
     color: rgba(150.348, 152.1568, 165.852, var(--text-opacity));
     font-size: 1rem;
+  }
+
+  .nav-list li:hover::after {
+    height: 2px;
+    width: 100%;
   }
 
   .bg-container {
