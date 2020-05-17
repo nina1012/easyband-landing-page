@@ -60,6 +60,8 @@ a {
 /****************************** COMPONENTS ************************************/
 @import 'tailwindcss/components';
 .nav-list {
+  @apply flex;
+  @apply flex-col;
   @apply max-w-auto;
   @apply absolute;
   @apply text-center;
@@ -178,7 +180,8 @@ a svg:hover path {
   .nav-list {
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
     top: 0;
     width: 40%;
   }

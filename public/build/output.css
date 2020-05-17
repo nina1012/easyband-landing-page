@@ -511,6 +511,8 @@ a {
 /****************************** COMPONENTS ************************************/
 
 .nav-list {
+  display: flex;
+  flex-direction: column;
   @apply w-10/12;
   @apply mx-auto;
   @apply my-0;
@@ -815,7 +817,8 @@ a svg:hover path {
   .nav-list {
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
     top: 0;
     width: 40%;
   }
